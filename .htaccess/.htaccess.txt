@@ -1,0 +1,7 @@
+ErrorDocument 404 /ym6793/235/error/error.html
+AuthType shibboleth 
+AuthName "RIT" 
+ShibRequireSession On 
+SSLRequireSSL 
+require valid-user
+
