@@ -1,0 +1,49 @@
+h1 {
+    color: #011936;
+    font-family: 'Lobster', cursive;
+    border-bottom: 1px solid blue;
+    
+}
+p {
+    margin-left: 100px;
+}
+a:link {
+    color: rgb(83, 72, 233);
+}
+
+a:visited {
+    color: rgb(127, 206, 37);
+}
+
+a:focus {
+    color: rgb(201, 43, 130);
+    background-color: #ffd9d9;
+}
+
+a:hover {
+    color: rgb(57, 146, 219);
+    background-color: #ffd9d9;
+}
+
+a:active {
+    color: red;
+    background-color: #ffd9d9;
+}
+#brief-bio {
+    font-style: Times New Roman;
+    color: green;
+}
+body {
+    background-color: #E9CEE6;
+    font-family: Arial, sans-serif;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+img {
+    float: right;
+    margin: 0 12px;
+}
