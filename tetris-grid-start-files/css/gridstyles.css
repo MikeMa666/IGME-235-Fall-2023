@@ -11,7 +11,7 @@ body {
     "intro" 
     "playground" 
     "footer";
-  grid-template-columns: 500px 1fr; 
+  grid-template-columns: auto auto; 
   grid-template-rows: 345px auto auto auto;
 }
 @media screen and (min-width: 850px) {
@@ -22,7 +22,7 @@ body {
       "menu       menu"
       "playground playground"
       "footer     footer";
-      grid-template-columns: 500px 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 345px auto auto auto;
     }
   }
