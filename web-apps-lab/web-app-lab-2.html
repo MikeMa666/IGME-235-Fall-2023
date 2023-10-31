@@ -4,24 +4,64 @@
 	<meta charset="utf-8" />
 	<title>DOM-3</title>
 	<style>
-		body{border:1px solid gray;}
-		p b{transform: rotate(20deg)}
+		body { border: 1px solid gray; }
+		p b { transform: rotate(20deg); }
 	</style>
 </head>
 <body>
-<h1>My Page</h1>
-<h2>Info</h2>
-<h2>Pictures</h2>
-<h2>More Info</h2>
-<p>Blah <b>Blah</b> Blah</p>
-<p>Blah <b>Blah</b> Blah</p>
-<p id="lastParagraph">Blah <b>Blah</b> Blah</p>
-<footer>Copyright &copy; <b>20XX</b></footer>
-<script>
-	"use strict"; 
-  
-  // add your own code here.
-	
+	<h1>My Page</h1>
+	<h2>Info</h2>
+	<h2>Pictures</h2>
+	<h2>More Info</h2>
+	<p>Blah <b>Blah</b> Blah</p>
+	<p>Blah <b>Blah</b> Blah</p>
+	<p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+	<footer>Copyright &copy; <b>20XX</b></footer>
+	<script>
+		"use strict"; 
+
+		// Select the first <h1> element and change its innerHTML
+		let h1Element = document.querySelector('h1');
+		h1Element.innerHTML = "My UFO Page";
+
+		// Select the first <h2> element and change its innerHTML
+		let firstH2Element = document.querySelector('h2');
+		firstH2Element.innerHTML = "My UFO Info";
+
+		// Select the second <h2> element and change its innerHTML
+		let secondH2Element = document.querySelectorAll('h2')[1];
+		secondH2Element.innerHTML = "My UFO Pictures";
+
+		// Select the third <h2> element and set its innerHTML to an empty string
+		let thirdH2Element = document.querySelectorAll('h2')[2];
+		thirdH2Element.innerHTML = "";
+
+		// Select the <body> element and make style changes
+		let bodyElement = document.body;
+		bodyElement.style.fontFamily = "sans-serif";
+		bodyElement.style.color = "#FF4444"; // Reddish color
+
+		// Select the first paragraph and make various changes
+		let firstParagraph = document.querySelector('p');
+		firstParagraph.innerHTML = 'Report your UFO sightings here: <a href="http://www.nuforc.org">http://www.nuforc.org</a>';
+		firstParagraph.style.color = "green";
+		firstParagraph.style.fontWeight = "bold";
+		firstParagraph.style.fontSize = "2em";
+		firstParagraph.style.textTransform = "uppercase";
+		firstParagraph.style.textShadow = "3px 2px #A44";
+
+		// Select the second paragraph and set its innerHTML to an empty string
+		let secondParagraph = firstParagraph.nextElementSibling;
+		secondParagraph.innerHTML = "";
+
+		// Select the third paragraph and insert an image
+		let thirdParagraph = secondParagraph.nextElementSibling;
+		thirdParagraph.innerHTML = '<img src="Wiley-UFO-03.webp" alt="UFO Image">';
+
+		// Select the <footer> copyright notice and set it to the current year and your name(s)
+		let footerElement = document.querySelector('footer');
+		footerElement.innerHTML = `Copyright &copy; ${new Date().getFullYear()} Your Name`;
+
 	</script>
 </body>
 </html>

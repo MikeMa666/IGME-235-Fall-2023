@@ -40,6 +40,35 @@ let links = {
 		"New Media Club" : "http://newmediaclub.cias.rit.edu"
 	}
 
+// Loop through the colors array and add list items to the colorsList
+let colorsList = document.getElementById("colorsList");
+for (let i = 0; i < colors.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.textContent = colors[i];
+    colorsList.appendChild(listItem);
+}
+
+// Loop through the foods array using ES6 for...of and add list items to the foodsList
+let foodsList = document.getElementById("foodsList");
+for (let food of foods) {
+    let listItem = document.createElement("li");
+    listItem.textContent = food;
+    foodsList.appendChild(listItem);
+}
+
+// Loop through the links object and add functioning links to the linksList
+let linksList = document.getElementById("linksList");
+for (let key in links) {
+    if (links.hasOwnProperty(key)) {
+        let listItem = document.createElement("li");
+        let link = document.createElement("a");
+        link.href = links[key];
+        link.textContent = key;
+        listItem.appendChild(link);
+        linksList.appendChild(listItem);
+    }
+}
+
 </script>
 </body>
 </html>

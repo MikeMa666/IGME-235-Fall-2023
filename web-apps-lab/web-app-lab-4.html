@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Web Apps-4-HW</title>
+    <style>
+        body{border:1px solid gray;}
+    </style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Colors</h2>
+
+<ol id="colorsList">
+    
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+    
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+    
+</ol>
+
+<script>
+"use strict";
+
+// Default array values
+const defaultArray = ["puppydogs", "butterflies", "lollipops"];
+
+// Function to create lists
+const createList = (listElement, array = defaultArray) => {
+    for (const item of array) {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        listElement.appendChild(listItem);
+    }
+};
+
+// Lists
+const colorsList = document.getElementById("colorsList");
+const foodsList = document.getElementById("foodsList");
+const linksList = document.getElementById("linksList");
+
+// Call the createList function with different arrays
+createList(colorsList, ["red", "green", "blue", "purple", "pink"]);
+createList(foodsList, ["apple", "banana", "orange"]);
+createList(linksList, Object.keys(links).map(key => links[key]));
+</script>
+</body>
+</html>
