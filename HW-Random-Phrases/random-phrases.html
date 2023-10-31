@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrases</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="displayQuote()">
+    <div class="background-image"></div>
+    <header>
+      <h1>Random Phrases</h1>
+    </header>
+    <main>
+      <div class="quote-container">
+        <p id="quote">"This is where the random phrases will appear."</p>
+        <button onclick="displayQuote()">Get Another Phrase</button>
+      </div>
+    </main>
+    <footer>
+      <p>Created by Yuxiang Ma</p>
+    </footer>
+    <script>
+      const quotes = [
+        "Life is what happens when you're busy making other plans.",
+        "Get busy living or get busy dying.",
+        "You have within you right now, everything you need to deal with whatever the world can throw at you.",
+        "Believe you can and you're halfway there.",
+        "The only impossible journey is the one you never begin."
+      ];
+  
+      function displayQuote() {
+        const quoteElement = document.getElementById('quote');
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteElement.textContent = `"${quotes[randomIndex]}"`;
+      }
+    </script>
+  </body>
+
+</html>
