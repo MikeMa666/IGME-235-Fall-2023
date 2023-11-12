@@ -17,15 +17,29 @@
  
  #status{
      font-style: italic;
-     height:32px;
+     /* height:32px; */
  }
 
  #content{
+    margin: 0 auto;
+    width : 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 20px;
+    gap: 20px 10px;
  }
- 
+ .result{
+    display:flex;
+    flex-direction:column;
+    border: 1px solid #ccc; /* Add a light gray border for a frame */
+    padding: 10px;
+}
+.result img{
+    width: 100%;
+    box-shadow: 0 15px 18px 0 rgba(0,0,0,.4);
+}
+.result span{
+    order: -1;
+}
  /* .result {
     position: relative;
     height: 175px;
@@ -36,10 +50,7 @@
     margin-left:10px;
     margin-bottom:10px;
 } */
-.result{
-    display:flex;
-    flex-direction:column;
-}
+
 /* .result img {
     position: absolute;
     left: 5px;
@@ -92,7 +103,18 @@ button:active{
 
 button:focus {outline:0;}
 
-.widgets{
+.widgets {
+    display: flex; /* Use flexbox to center children */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if you have a defined height */
     margin-top: 1em;
-    margin-bottom:1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc; /* Add a light gray border for a frame */
+    padding: 10px; /* Add some space inside the border */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow to give a "lifted" look */
+}
+
+/* If .widgets is not a flex container already and you want to center a flex child */
+.widget-item { /* Replace with the actual class or element selector of your child elements */
+    margin: auto; /* This will center the child element within .widgets if .widgets has a flex display */
 }
